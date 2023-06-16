@@ -1,0 +1,18 @@
+<div class="container mt-5 d-flex flex-column justify-content-center align-items-center">
+    <h1>Nowy wpis dziennika</h1>
+    <form (submit)="createLogBook()" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="mb-3">
+        <label for="name" class="form-label">Rodzaj ryby:</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required textFormat>
+      </div>
+      <div class="mb-3">
+        <label for="weight" class="form-label">Waga:</label>
+        <input placeholder="[g]" type="number" class="form-control" id="weight" [(ngModel)]="weight" name="weight"  required>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Data:</label>
+        <input type="date" class="form-control" id="date" [(ngModel)]="date" name="date" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Dodaj</button>
+    </form>
+  </div>

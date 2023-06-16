@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">Nazwa</th>
+        <th class="text-center">Łowisko PZW</th>
+        <th class="text-center">Waga [g]</th>
+        <th class="text-center">Data</th>
+        <th class="text-center">Akcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let index of logbook">
+        <td class="text-center">{{ index.name }}</td>
+        <td class="text-center">{{ index.association }}</td>
+        <td class="text-center">{{ index.weight }}</td>
+        <td class="text-center">{{ index.date }}</td>
+        <td class="text-center">
+          <button class="btn btn-success m-1" (click)="editLogBook(index)">Edytuj</button>
+          <button class="btn btn-primary m-1" (click)="changeAssoc(index)">Typ łowiska</button>
+          <button class="btn btn-outline-danger m-1" (click)="deleteIndex(index)">❌</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="fixed-button">
+  <button class="btn btn-success" routerLink="/add">Dodaj nowy wpis</button>
+</div>
